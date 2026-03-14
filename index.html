@@ -1,0 +1,394 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EINHERJAR ESPORT</title><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet"><style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+background:#030712;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 80px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:26px;
+font-weight:800;
+color:#3b82f6;
+}
+
+nav a{
+margin:0 18px;
+text-decoration:none;
+color:white;
+font-weight:500;
+cursor:pointer;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:2px;
+background:#3b82f6;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+section{
+display:none;
+min-height:100vh;
+padding:140px 80px 80px;
+}
+
+.active{
+display:block;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:75px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero-text p{
+opacity:0.85;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 30px;
+border:none;
+background:#2563eb;
+color:white;
+font-weight:700;
+cursor:pointer;
+margin-right:10px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+transform:scale(1.05);
+}
+
+.hero img{
+width:500px;
+filter:drop-shadow(0 0 30px #2563eb);
+}
+
+.section-title{
+font-size:45px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.card{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+border:1px solid transparent;
+transition:0.35s;
+}
+
+.card:hover{
+border:1px solid #2563eb;
+transform:translateY(-10px);
+background:#020617;
+}
+
+.team-area{
+margin-top:70px;
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:40px;
+}
+
+.team-box{
+background:#2563eb;
+padding:40px;
+border-radius:12px;
+}
+
+.team-box h2{
+margin-bottom:20px;
+font-size:30px;
+}
+
+.team-gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.team-gallery img{
+width:100%;
+border-radius:10px;
+}
+
+footer{
+background:#020617;
+padding:25px;
+text-align:center;
+margin-top:40px;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+z-index:9999;
+}
+
+.popup img{
+width:350px;
+margin-bottom:20px;
+}
+
+.popup button{
+padding:12px 25px;
+border:none;
+background:#2563eb;
+color:white;
+cursor:pointer;
+font-weight:700;
+}
+
+.card button{
+margin-top:15px;
+}
+
+</style></head><body><header><div class="logo">EINHERJAR</div><nav>
+<a onclick="openPage('home')">Home</a>
+<a onclick="openPage('wars')">Team Wars</a>
+<a onclick="openPage('blog')">Blog</a>
+<a onclick="openPage('shop')">Shop</a>
+<a onclick="openPage('contact')">Contact</a>
+</nav></header><section id="home" class="active"><div class="hero"><div class="hero-text"><h1>ESPORT<br>REINVENTED</h1><p>EINHERJAR adalah komunitas gaming yang fokus pada
+kompetisi, teamwork, dan perkembangan skill anggota.</p><button class="btn" onclick="openPage('contact')">READ MORE</button>
+<button class="btn" onclick="openPage('wars')">GET STARTED</button>
+<button class="btn" onclick="joinWA()">JOIN COMMUNITY</button>
+
+</div><img src="https://files.catbox.moe/adxi1r.png"></div><div class="team-area"><div class="team-box"><h2>TEAM</h2><p>DEREN — FOUNDER</p>
+<p>ALL ADMIN — PETINGGI</p>
+<p>DEREN — OWNER INTI</p>
+<p>FAHRIL — OWNER JR</p>
+<p>DEREN — MEMBER INTI
+<p>TAPAII — MEMBER INTI</P>
+<p>MAELL — MEMBER INTI</p>
+<p>HABI — MEMBER INTI</p>
+<p>FAHRIL — MEMBER JR</p>
+<p>NAA — MEMBER JR</p>
+<p>KAAL — MEMBER JR</p>
+<p>NOPALL — MEMBER JR</p>
+<p>CANDRA — MEMBER JR</p>
+<p>PUTRA — MEMBER JR</p>
+<p>RIDWAN — MEMBER JR</p>
+<p>IRPAN — MEMBER JR</p>
+<p>REI — MEMBER JR</p>
+<p>SAN — MEMBER JR</p>
+</div><div class="team-gallery"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<img src="https://files.catbox.moe/r18q6i.jpg">
+<img src="https://files.catbox.moe/iyl9ur.jpg"></div></div></section><section id="wars">
+
+<h1 class="section-title">TEAM WARS</h1>
+
+<div class="grid">
+
+<div class="card">
+Einherjar VS Revalation
+<br>
+<button class="btn" onclick="showWin('https://files.catbox.moe/jzgonb.jpg','Victory vs Revalation')">WIN</button>
+</div>
+
+<div class="card">
+Einherjar VS Warkombat
+<br>
+<button class="btn" onclick="showWin('https://files.catbox.moe/qjma4y.jpg','Victory vs Warkombat')">WIN</button>
+</div>
+
+<div class="card">
+Einherjar VS Aimnyasar
+<br>
+<button class="btn" onclick="showWin('https://files.catbox.moe/4f76oy.jpg','Victory vs Aimnyasar')">WIN</button>
+</div>
+
+<div class="card">
+Einherjar VS Vortex Amazone
+<br>
+<button class="btn" onclick="showWin('https://files.catbox.moe/kuy12d.jpg','Victory vs Vortex Amazone')">WIN</button>
+</div>
+
+<div class="card">
+Einherjar VS Nyarnglanyar
+<br>
+<button class="btn" onclick="showWin('https://files.catbox.moe/tnxfuf.jpg','Victory vs Nyarnglanyar')">WIN</button>
+</div>
+
+<div class="card">
+Einherjar VS Domino
+<br>
+<button class="btn" onclick="showWin('https://files.catbox.moe/x2wxt9.jpg','Victory vs Domino')">WIN</button>
+</div>
+
+</div>
+
+</section><section id="blog"><h1 class="section-title">COMMUNITY BLOG</h1><div class="grid"><div class="card">Battle OF Wars</div>
+<div class="card">Battle OF Zuboy</div>
+<div class="card">Update Komunitas</div></div></section><section id="shop">
+
+<h1 class="section-title">DIGITAL SHOP</h1>
+
+<div class="grid">
+
+<div class="card">
+Script Bot WhatsApp
+<br>
+<button class="btn" onclick="showShop('Script Bot WhatsApp','Rp50.000')">BUY</button>
+</div>
+
+<div class="card">
+Panel Hosting Bot
+<br>
+<button class="btn" onclick="showShop('Panel Hosting','Rp30.000')">BUY</button>
+</div>
+
+<div class="card">
+Logo Gaming Design
+<br>
+<button class="btn" onclick="showShop('Logo Gaming','Rp40.000')">BUY</button>
+</div>
+
+<div class="card">
+Custom Clan Website
+<br>
+<button class="btn" onclick="showShop('Website Clan','Rp120.000')">BUY</button>
+</div>
+
+</div>
+
+</section><section id="contact"><h1 class="section-title">CONTACT</h1><p>Email : einherjar@email.com</p>
+<p>Discord Grup : https://discord.gg/u3vSX7gSp</p>
+<p>Instagram : —</p></section><footer>© 2026 EINHERJAR Community
+
+</footer>
+<div class="popup" id="popupWin">
+
+<img id="winImage" src="">
+<h2 id="winTitle">VICTORY</h2>
+
+<button onclick="closePopup()">CLOSE</button>
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="popup" id="popupShop">
+
+<img src="https://i.imgur.com/qIufhof.png">
+
+<h2 id="shopTitle"></h2>
+<h3 id="shopPrice"></h3>
+
+<button onclick="closePopup()">CLOSE</button>
+
+</div><script>
+  function showWin(img,title){
+
+document.getElementById("winImage").src = img
+document.getElementById("winTitle").innerText = title
+
+document.getElementById("popupWin").style.display = "flex"
+
+}
+
+function showShop(title,price){
+
+document.getElementById("shopTitle").innerText=title
+document.getElementById("shopPrice").innerText=price
+
+document.getElementById("popupShop").style.display="flex"
+
+}
+
+function closePopup(){
+
+document.getElementById("popupWin").style.display="none"
+document.getElementById("popupShop").style.display="none"
+
+}
+
+function openPage(id){
+
+document.querySelectorAll("section").forEach(sec=>{
+sec.classList.remove("active")
+})
+
+document.getElementById(id).classList.add("active")
+
+}
+
+function joinWA(){
+
+window.open(
+"https://wa.me/6285119268943?text=Halo%20Admin%20EINHERJAR%20saya%20ingin%20bergabung%20ke%20komunitas",
+"_blank"
+)
+
+}
+
+</script></body>
+</html>
